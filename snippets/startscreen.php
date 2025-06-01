@@ -1,7 +1,8 @@
     <div class="container">
+        <small>Made by Sax</small>
         <h1>Ik ga op reis en ik neem mee...</h1>
         <h2>Wie gaan er op reis?</h2>
-        <form>
+        <form method="post">
             <div class="player-input">
                 <label for="player1">Naam speler 1:</label>
                 <input type="text" id="player1" name="player1" placeholder="Speler 1">
