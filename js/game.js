@@ -7,7 +7,8 @@ $(document).ready(function () {
 	    console.log('test');
 
         if (!checkInput(input)) {
-            alert("Game over! Fout antwoord.");
+            alert("Game over! Fout antwoord");
+		window.location.href = window.location.pathname;
             return;
         }
 
@@ -19,7 +20,9 @@ $(document).ready(function () {
             switchPlayer();
         }
 
-        $('.item').val('');
+        $('#item').val('');
+	$('.amount').text(inputList.length);
+	$('.total').text(list.length);
     }
 
     $('.js--add').on('click', handleInput);

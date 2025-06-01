@@ -1,4 +1,5 @@
 <div class="container">
+	<div><span class="amount">0</span> / <span class="total">1</span></div>
         <small class="p1">Beurt: <?= htmlspecialchars($player1) ?></small>
         <small class="p2">Beurt: <?= htmlspecialchars($player2) ?></small>
         <h1>Ik ga op reis en ik neem mee...</h1>
