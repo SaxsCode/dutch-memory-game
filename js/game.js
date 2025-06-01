@@ -2,13 +2,9 @@ let list = [];
 let inputList = [];
 
 $(document).ready(function () {
-    $('.js--add').on('click', function() {
-	
-	// debug
-	console.log("list", list);
-	console.log("inputlist", inputList);
-
+    function handleInput() {
         const input = $('#item').val().trim();
+	    console.log('test');
 
         if (!checkInput(input)) {
             alert("Game over! Fout antwoord.");
@@ -19,11 +15,20 @@ $(document).ready(function () {
             addToInputList(input);
         } else {
             addToList(input);
-            inputList = [];
+            inputList = []; 
             switchPlayer();
         }
 
         $('.item').val('');
+    }
+
+    $('.js--add').on('click', handleInput);
+
+    $(document).on('keydown', function(e) {
+        if (e.key === 'Enter' || e.keyCode === 13) {
+            e.preventDefault(); 
+            handleInput();
+        }
     });
 });
 
