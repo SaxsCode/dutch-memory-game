@@ -12,8 +12,8 @@
 
 if (isset($_POST['player1'])) {
 
-    $player1 = $_POST['player1'] ?? 'Speler 1';
-    $player2 = $_POST['player2'] ?? 'Speler 2';
+    $player1 = empty($_POST['player1']) ? 'Speler 1' : $_POST['player1'];
+    $player2 = empty($_POST['player2']) ? 'Speler 2' : $_POST['player2'];
 
     include_once 'snippets/game.php';
 } else {
