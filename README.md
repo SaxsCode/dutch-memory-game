@@ -49,8 +49,8 @@ http://localhost/
 
 ## 🎨 Screenshots
 
-![Start screen](screenshots/screen1.png)
-![Game screen](screenshots/screen1.png)
+![Start screen](screenshots/start.png)
+![Game screen](screenshots/game.png)
 
 ## 📄 License
 
