@@ -1,5 +1,5 @@
     <div class="container">
-        <h1>Ik ben op reis en ik neem mee...</h1>
+        <h1>Ik ga op reis en ik neem mee...</h1>
         <h2>Wie gaan er op reis?</h2>
         <form>
             <div class="player-input">

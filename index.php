@@ -6,6 +6,18 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <?php include_once 'snippets/startscreen.php'; ?>
+<?php
+
+if (isset($_POST)) {
+    $player1 = $_POST['player1'] ?? 'Speler 1';
+    $player2 = $_POST['player2'] ?? 'Speler 2';
+
+    include_once 'snippets/game.php';
+} else {
+    include_once 'snippets/startscreen.php';
+}
+?>
+
+
 </body>
 </html>
