@@ -20,12 +20,20 @@ body {
 }
 
 small {
-    display: block;
     font-size: 1.1rem;
-    color: #ff7e5f;
     margin-bottom: 1.2rem;
     font-weight: bold;
     letter-spacing: 0.5px;
+}
+
+.p1 {
+	display: block;
+	color: blue;
+}
+
+.p2 {
+	display: none;
+	color: red;
 }
 
 h1 {
