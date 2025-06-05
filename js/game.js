@@ -7,8 +7,7 @@ $(document).ready(function () {
 	    console.log('test');
 
         if (!checkInput(input)) {
-            alert("Game over! Fout antwoord");
-		window.location.href = window.location.pathname;
+            window.location.replace('index.php?gameover');
             return;
         }
 
@@ -20,14 +19,12 @@ $(document).ready(function () {
             switchPlayer();
         }
 
-        $('#item').val('');
-	$('.amount').text(inputList.length);
-	$('.total').text(list.length);
+        $('.item').val('');
     }
 
     $('.js--add').on('click', handleInput);
 
-    $(document).on('keydown', function(e) {
+    $( ).on('keydown', function(e) {
         if (e.key === 'Enter' || e.keyCode === 13) {
             e.preventDefault(); 
             handleInput();
@@ -51,6 +48,6 @@ function addToList(input) {
 }
 
 function switchPlayer() {
-	$('.p1').toggleClass('active');
-	$('.p2').toggleClass('active');
+	$(".p1").toggle();
+	$(".p2").toggle();
 }

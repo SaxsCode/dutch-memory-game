@@ -10,6 +10,11 @@
 <body>
 <?php
 
+if (isset($_GET['gameover'])) {
+    include_once 'snippets/gameover.php';
+    exit();
+}
+
 if (isset($_POST['player1'])) {
 
     $player1 = empty($_POST['player1']) ? 'Speler 1' : $_POST['player1'];
