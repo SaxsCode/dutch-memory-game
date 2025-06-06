@@ -2,47 +2,36 @@ let list = [];
 let inputList = [];
 
 $(document).ready(function () {
-    function handleInput() {
-        const input = $('#item').val().trim();
-
-        if (!checkInput(input)) {
-
-            $.ajax({
-                type: 'POST',
-                url: 'ajax/getStatistics.php',
-                data: {
-                    list: list
-                },
-                dataType: 'JSON',
-                success: function (snippet) {
-                    console.log(snippet);
-                    $('body').html(snippet);
-                }
-
-            })
-            return;
-        }
-
-        if (inputList.length < list.length) {
-            addToInputList(input);
-        } else {
-            addToList(input);
-            inputList = []; 
-            switchPlayer();
-        }
-
-        $('.item').val('');
-    }
-
     $('.js--add').on('click', handleInput);
 
-    $( ).on('keydown', function(e) {
+    $('body').on('keydown', function(e) {
         if (e.key === 'Enter' || e.keyCode === 13) {
             e.preventDefault(); 
             handleInput();
         }
     });
 });
+
+function handleInput() {
+    const input = $('#item').val().trim();
+
+    if (!checkInput(input)) {
+        showGameOver()
+        return;
+    }
+
+    if (inputList.length < list.length) {
+        addToInputList(input);
+    } else {
+        addToList(input);
+        inputList = []; 
+        switchPlayer();
+    }
+    
+    $('.amount').text(inputList.length);
+    $('.total').text(list.length);
+    $('#item').val('');
+}
 
 function checkInput(input) {
     if (inputList.length < list.length) {
@@ -62,4 +51,19 @@ function addToList(input) {
 function switchPlayer() {
 	$(".p1").toggle();
 	$(".p2").toggle();
+}
+
+function showGameOver() {
+    $.ajax({
+        type: 'POST',
+        url: 'ajax/getStatistics.php',
+        data: {
+            list: list
+        },
+        dataType: 'JSON',
+        success: function (snippet) {
+            $('body').html(snippet);
+        }
+
+    })
 }
