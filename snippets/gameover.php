@@ -11,4 +11,6 @@
                 }
         ?>
         </ol>
+
+        <button onclick="location.href('/dutch-memory-game')" type="button">Naar home</button>
     </div>

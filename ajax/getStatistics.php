@@ -3,6 +3,12 @@
 $list = $_POST['list'] ?? [];
 $score = count($list);
 
+$highscore = (int) $_SESSION['highscore'];
+
+if ($score > $highscore) {
+    $_SESSION['highscore'] = $score;
+}
+
 ob_start();
 include_once '../snippets/gameover.php';
 $snippet = ob_get_clean();

@@ -10,6 +10,15 @@
 <body>
 <?php
 
+var_dump($_SESSION['highscore']);
+if (isset($_SESSION['highscore'])) {
+    ?>
+    <div>
+        <h2>Highscore: <?= $_SESSION['highscore']; ?> </h2>
+    </div>
+    <?php
+}
+
 if (isset($_POST['player1'])) {
 
     $player1 = empty($_POST['player1']) ? 'Speler 1' : $_POST['player1'];
