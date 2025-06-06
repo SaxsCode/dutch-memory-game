@@ -1,4 +1,14 @@
 <div class="container">
-	<div><span class="amount">0</span> / <span class="total">1</span></div>
+	<div>
         <h1>GAME OVER!..</h1>
+        <h3>score: <?= $score ?><h3>
+
+        <h2>Ik ga op reis en ik neem mee:</h2>
+        <ol>
+        <?php
+                foreach ($list as $key => $value) {
+                    echo '<li>'.$value.'</li>';
+                }
+        ?>
+        </ol>
     </div>

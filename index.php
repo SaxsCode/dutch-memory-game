@@ -2,18 +2,13 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Ik ben op reis en ik neem mee...</title>
+    <title>Ik ga op reis en ik neem mee...</title>
     <link rel="stylesheet" href="styles/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/game.js"></script>
 </head>
 <body>
 <?php
-
-if (isset($_GET['gameover'])) {
-    include_once 'snippets/gameover.php';
-    exit();
-}
 
 if (isset($_POST['player1'])) {
 

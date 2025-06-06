@@ -4,10 +4,22 @@ let inputList = [];
 $(document).ready(function () {
     function handleInput() {
         const input = $('#item').val().trim();
-	    console.log('test');
 
         if (!checkInput(input)) {
-            window.location.replace('index.php?gameover');
+
+            $.ajax({
+                type: 'POST',
+                url: 'ajax/getStatistics.php',
+                data: {
+                    list: list
+                },
+                dataType: 'JSON',
+                success: function (snippet) {
+                    console.log(snippet);
+                    $('body').html(snippet);
+                }
+
+            })
             return;
         }
 
