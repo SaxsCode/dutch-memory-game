@@ -13,9 +13,9 @@
 session_start();
 if (isset($_SESSION['highscore'])) {
     ?>
-    <div>
-        <h2>Highscore: <?= $_SESSION['highscore']; ?> </h2>
-    </div>
+<div class="highscore">
+    <h2>Highscore: <?= $_SESSION['highscore']; ?> </h2>
+</div>
     <?php
 }
 

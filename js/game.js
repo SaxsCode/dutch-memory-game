@@ -50,8 +50,8 @@ function addToList(input) {
 }
 
 function switchPlayer() {
-	$(".p1").toggle();
-	$(".p2").toggle();
+	$(".p1").toggleClass("active");
+	$(".p2").toggleClass("active");
 }
 
 function showGameOver() {
