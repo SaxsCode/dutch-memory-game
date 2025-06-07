@@ -7,7 +7,12 @@ $(document).ready(function () {
     $('body').on('keydown', function(e) {
         if (e.key === 'Enter' || e.keyCode === 13) {
             e.preventDefault(); 
-            handleInput();
+            if ($('#item').val() === undefined)
+            {
+                $("form").submit();
+            } else {
+                handleInput();
+            }
         }
     });
 
@@ -36,7 +41,7 @@ function handleInput() {
 
 function checkInput(input) {
     if (inputList.length < list.length) {
-        return input === list[inputList.length];
+        return input.toLowerCase() === list[inputList.length].toLowerCase();
     }
     return input.length > 0 && !list.includes(input);
 }
@@ -62,12 +67,21 @@ function showGameOver() {
             list: list
         },
         dataType: 'JSON',
-        success: function (snippet) {
-            $('body').html(snippet);
-            $('.js--home-button').on('click', function(e) {
-               console.log('test'); 
+        success: success 
+    });
+}
+
+function success(snippet) {
+    $('body').html(snippet);
+
+    $('.js--home-button').on('click', function(e) {
+       window.location.href = "/dutch-memory-game";
+    });
+
+    $('body').on('keydown', function(e) {
+        if (e.key === 'Enter' || e.keyCode === 13) {
+            e.preventDefault(); 
                window.location.href = "/dutch-memory-game";
-            });
         }
-    })
+    });
 }

@@ -51,6 +51,7 @@ http://localhost/
 
 ![Start screen](screenshots/start.png)
 ![Game screen](screenshots/game.png)
+![Gameover screen](screenshots/gameover.png)
 
 ## 📄 License
 

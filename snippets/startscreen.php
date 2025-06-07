@@ -1,5 +1,5 @@
     <div class="container">
-        <small>Made by Sax</small>
+        <small>Made by <a href="https://github.com/SaxsCode/dutch-memory-game" target="_blank">SaxsCode</a></small>
         <h1>Ik ga op reis en ik neem mee...</h1>
         <h2>Wie gaan er op reis?</h2>
         <form method="post">
