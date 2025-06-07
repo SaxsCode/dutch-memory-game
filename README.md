@@ -1,6 +1,6 @@
 # Ik ga op reis en ik neem mee...
 
-A web version of the classic Dutch memory game “Ik ga op reis en ik neem mee...” (“I’m going on a trip and I’m bringing...”), built with PHP, JavaScript, and modern CSS.
+A web version of the classic Dutch memory game “Ik ga op reis en ik neem mee...” (“I’m going on a trip and I’m bringing...”), built with PHP and JQuery.
 
 ## 📦 Features
 
@@ -8,7 +8,8 @@ A web version of the classic Dutch memory game “Ik ga op reis en ik neem mee..
 - Modern, responsive design
 - Keyboard (Enter) and mouse support
 - Clear turn indicator and score display
-- Option to restart when the game is over
+- See your list and score the game is over
+- Keep track of your highscore!
 
 ## 🚀 Installation
 
