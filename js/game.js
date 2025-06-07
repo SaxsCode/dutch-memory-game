@@ -10,6 +10,7 @@ $(document).ready(function () {
             handleInput();
         }
     });
+
 });
 
 function handleInput() {
@@ -63,7 +64,10 @@ function showGameOver() {
         dataType: 'JSON',
         success: function (snippet) {
             $('body').html(snippet);
+            $('.js--home-button').on('click', function(e) {
+               console.log('test'); 
+               window.location.href = "/dutch-memory-game";
+            });
         }
-
     })
 }

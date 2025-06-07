@@ -1,12 +1,13 @@
 <?php
 
 $list = $_POST['list'] ?? [];
-$score = count($list);
+$score = (int) count($list);
 
+session_start();
 $highscore = (int) $_SESSION['highscore'];
 
 if ($score > $highscore) {
-    $_SESSION['highscore'] = $score;
+    $highscore = $_SESSION['highscore'] = $score;
 }
 
 ob_start();

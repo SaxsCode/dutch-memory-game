@@ -10,7 +10,7 @@
 <body>
 <?php
 
-var_dump($_SESSION['highscore']);
+session_start();
 if (isset($_SESSION['highscore'])) {
     ?>
     <div>
